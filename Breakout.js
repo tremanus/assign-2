@@ -46,11 +46,13 @@ function Breakout() {
   // a few GLabels to display lives, points, and some messages
   let livesLabel = new GLabel(`${lives} lives left`, 20, 30);
   livesLabel.setFont("SansSerif-bold-20");
+  livesLabel.setColor('white');
   livesLabel.isLabel = true;
   gw.add(livesLabel);
 
   let pointsLabel = new GLabel(`${points} pts`, 525, 30);
   pointsLabel.setFont("SansSerif-bold-20");
+  pointsLabel.setColor('white');
   pointsLabel.isLabel = true;
   gw.add(pointsLabel);
 
@@ -185,6 +187,7 @@ function drawBricks(gw) {
 function drawPaddle(gw) {
   let paddle = GRect((GWINDOW_WIDTH - PADDLE_WIDTH) / 2,  PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT);
   paddle.setFilled(true);
+  paddle.setColor('white');
   gw.add(paddle);
   return paddle;
 }
@@ -209,7 +212,7 @@ function movePaddle(event, paddle) {
 function drawBall(gw) {
   let ball = GOval((GWINDOW_WIDTH - BALL_SIZE) / 2, (GWINDOW_HEIGHT - BALL_SIZE) / 2, BALL_SIZE, BALL_SIZE);
   ball.setFilled(true);
-  ball.setColor('Purple');
+  ball.setColor('white');
   gw.add(ball);
   return ball;
 }
