@@ -146,7 +146,7 @@ function Breakout() {
                   updatePointsLabel();
           
                   // shows after the game is over (100 points)
-                  if (points === 100) {
+                  if (points === N_ROWS * N_COLS) {
                       clearInterval(timer);
                       gw.add(victoryLabel);
                       isRunning = false;
